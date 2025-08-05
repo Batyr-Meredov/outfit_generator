@@ -1,0 +1,6 @@
+checkpoints:
+  - /workspace/models/checkpoints
+loras:
+  - /workspace/models/loras
+controlnet:
+  - /workspace/models/controlnet

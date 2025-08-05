@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+    image: outfit-backend:latest
+    container_name: outfit-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./comfyui-data:/comfyui-data
+    restart: "no"
+    entrypoint: ["sh", "-c", "trap 'echo Backend stopped' EXIT && uvicorn main:app --host 0.0.0.0 --port 8000"]
+
+  comfyui:
+    build:
+      context: ./ComfyUI
+    image: comfyui:latest
+    container_name: comfyui
+    ports:
+      - "8188:8188"
+    volumes:
+      - ./comfyui-data:/workspace
+    restart: "no"
+    environment:
+      - CUDA_VISIBLE_DEVICES=""
+
