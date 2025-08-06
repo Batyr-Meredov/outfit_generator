@@ -1,1 +1,1 @@
-comfyui-data/models/checkpoints/*.safetensors
+./ComfyUI/models/checkpoints/*.safetensors

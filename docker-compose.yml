@@ -10,7 +10,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./comfyui-data:/comfyui-data
+      - ./backend:/app  # Nur Backend-Code mounten, falls nötig
     restart: "no"
     entrypoint: ["sh", "-c", "trap 'echo Backend stopped' EXIT && uvicorn main:app --host 0.0.0.0 --port 8000"]
 
@@ -22,8 +22,9 @@ services:
     ports:
       - "8188:8188"
     volumes:
-      - ./comfyui-data:/workspace
+      - ./ComfyUI/models:/app/models
+      - ./ComfyUI/input:/app/input
+      - ./ComfyUI/output:/app/output
     restart: "no"
     environment:
       - CUDA_VISIBLE_DEVICES=""
-

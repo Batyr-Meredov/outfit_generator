@@ -57,28 +57,32 @@ CMD ["python", "main.py", "--listen", "--port", "8188", "--output-directory", "/
 
 ## Place your .safetensors checkpoint files inside
 
-📁 Note: The folder `comfyui-data/models/checkpoints/` is visible in the repo,
+📁 Note: The folder `ComfyUI/models/checkpoints/` is visible in the repo,
 but `.safetensors` files are excluded by `.gitignore`.
 Please put your models there yourself.
 
 ## execute the following command in the main folder outfit_generator
 
 ```shell
-curl -L -o comfyui-data/models/checkpoints/sd_xl_base_1.0.safetensors \
+curl -L -o ComfyUI/models/checkpoints/sd_xl_base_1.0.safetensors \
 https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
 ```
 
 ```shell
-curl -L -o comfyui-data/models/checkpoints/v1-5-pruned-emaonly.safetensors \
+curl -L -o ComfyUI/models/checkpoints/v1-5-pruned-emaonly.safetensors \
 https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors
 ```
 
 ## Execute Docker Compose to build and start all services
 
 ```shell
-docker-compose up --build
+docker-compose build --no-cache
 ```
 
 ```shell
 docker compose up -d 
 ```
+
+#### Open your browser and go to http://localhost:8188
+
+#### backend service running on port 8000, you can also check http://localhost:8000
