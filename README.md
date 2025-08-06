@@ -5,7 +5,16 @@ The project uses a Python backend and CompfyUi as the image generation engine, o
 
 ## 🚀 How to Start the Project
 
-## Clone the ComfyUI repository
+## Clone Rerository
+
+## First, clone your main project (if you haven’t already):
+
+```shell
+git clone https://github.com/Batyr-Meredov/outfit_generator.git
+cd outfit_generator
+```
+
+## Then, inside this folder, clone ComfyUI Repository
 
 ```shell
 git clone https://github.com/comfyanonymous/ComfyUI.git
