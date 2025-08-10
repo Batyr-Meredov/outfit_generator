@@ -25,6 +25,9 @@ services:
       - ./ComfyUI/models:/app/models
       - ./ComfyUI/input:/app/input
       - ./ComfyUI/output:/app/output
+      - ./ComfyUI/workflows:/app/workflows
+
     restart: "no"
     environment:
-      - CUDA_VISIBLE_DEVICES=""
+      - CUDA_VISIBLE_DEVICES="".  # CUDA komplett deaktivieren
+

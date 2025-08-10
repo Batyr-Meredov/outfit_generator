@@ -70,12 +70,7 @@ CMD ["python", "main.py", "--listen", "--port", "8188", "--output-directory", "/
 but `.safetensors` files are excluded by `.gitignore`.
 Please put your models there yourself.
 
-## execute the following command in the main folder outfit_generator
-
-```shell
-curl -L -o ComfyUI/models/checkpoints/sd_xl_base_1.0.safetensors \
-https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors
-```
+## Execute the following command in the main folder outfit_generator
 
 ```shell
 curl -L -o ComfyUI/models/checkpoints/v1-5-pruned-emaonly.safetensors \
