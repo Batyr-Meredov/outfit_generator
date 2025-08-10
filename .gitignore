@@ -1,1 +1,2 @@
 ./ComfyUI/models/checkpoints/*.safetensors
+.DS_Store

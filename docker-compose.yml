@@ -28,6 +28,8 @@ services:
       - ./ComfyUI/workflows:/app/workflows
 
     restart: "no"
+    # command: python main.py --cpu
     environment:
       - CUDA_VISIBLE_DEVICES="".  # CUDA komplett deaktivieren
-
+    
+    
