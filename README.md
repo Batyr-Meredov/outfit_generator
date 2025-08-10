@@ -89,4 +89,4 @@ docker compose up -d
 
 #### Open your browser and go to http://localhost:8188
 
-#### backend service running on port 8000, you can also check http://localhost:8000
+#### backend service running on port 8000 http://localhost:8000 and frontend you can also check http://localhost:5173
